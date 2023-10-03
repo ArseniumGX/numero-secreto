@@ -38,4 +38,18 @@ h3 {
   font-size: 4em;
   padding: 0.8rem;
   margin: 1.2rem;
+}
+
+.btn-jogar {
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  background-color: #eb5e28;
+  border-radius: 12px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-jogar:hover {
+  box-shadow: 0 0 0.3em #eb5e28;
+  opacity: 0.9;
 }/*# sourceMappingURL=styles.css.map */

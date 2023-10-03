@@ -10,7 +10,10 @@ function validarChute(chute) {
 	}
 
 	if (numero === secretNumber) {
-		document.body.innerHTML = `<h2>Parabéns! Voce acertou.</h2><h3>O número secreto era ${secretNumber}</h2>`;
+		document.body.innerHTML = `
+			<h2>Parabéns! Voce acertou.</h2>
+			<h3>O número secreto era ${secretNumber}</h2>
+			<button type="button" id="recomecar" class="btn-jogar">Jogar Novamente</button>`;
 	} else if (numero > secretNumber) {
 		chuteElement.innerHTML = `
          <div>O número secreto é <i class="fa-solid fa-down-long"></i></div>
@@ -28,3 +31,9 @@ function chuteInvalido(numero) {
 function numeroForaRange(numero) {
 	return numero > maxValue || numero < minValue;
 }
+
+document.body.addEventListener("click", (e) => {
+	if (e.target.id === "recomecar") {
+		window.location.reload();
+	}
+});
