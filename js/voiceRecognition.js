@@ -8,9 +8,12 @@ recognition.lang = "pt-Br";
 recognition.start();
 
 recognition.addEventListener("result", onSpeak);
+recognition.addEventListener("end", () => recognition.start());
 
 function onSpeak(event) {
-	exibirChute(event.results[0][0].transcript);
+	const chute = event.results[0][0].transcript;
+	exibirChute(chute);
+	validarChute(chute);
 }
 
 function exibirChute(chute) {
